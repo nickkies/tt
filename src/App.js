@@ -64,7 +64,7 @@ function App() {
             </P>
             <P>
               <GiCrown />
-              &nbsp; uild Master: 데켄
+              &nbsp; Guild Master: 데켄
             </P>
             <P>
               <Gi3DHammer />
