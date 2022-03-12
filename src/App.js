@@ -3,6 +3,7 @@ import styled from '@emotion/styled/macro';
 import CurrentTime from './components/CurrentTime';
 import NextBoss from './components/NextBoss';
 import biPng from './img/bi.png';
+import TimeTable from './components/TimeTable';
 
 const Background = styled.div`
   width: 100vw;
@@ -16,7 +17,6 @@ const Container = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   border: 1px solid #a68a7b;
-  border-top: none;
   background-color: #363636;
   display: flex;
   flex-direction: column;
@@ -54,6 +54,7 @@ function App() {
           <Img src={biPng} alt='리니지다블류' />
           <CurrentTime />
           <NextBoss />
+          <TimeTable />
           <Footer>
             <P>하딘혈맹 화이팅</P>
             <P>만든이: 봉딱</P>
