@@ -34,6 +34,9 @@ export const nextAppearTimeState = selector({
       if (now > appear) {
         continue;
       } else {
+        if (i === appears.lenght && now < appear) {
+          return appears[0];
+        }
         return appear;
       }
     }
