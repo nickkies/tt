@@ -1,6 +1,8 @@
 import styled from '@emotion/styled/macro';
 import { useRecoilValue } from 'recoil';
 import { nextBossState, nextAppearTimeState } from '../atoms';
+import { GiPlainDagger } from 'react-icons/gi';
+
 import { BOSS } from '../constant';
 import adPng from '../img/ad.png';
 import cdPng from '../img/cd.png';
@@ -69,10 +71,26 @@ export default function NextBoss() {
             </ImageWrapper>
             <InfoContainer>
               <Ul>
-                <Li>{BOSS[boss].name}</Li>
-                <Li>{time}</Li>
-                <Li>{BOSS[boss].region}</Li>
-                <Li>{BOSS[boss].term}</Li>
+                <Li>
+                  <GiPlainDagger />
+                  &emsp;
+                  {BOSS[boss].name}
+                </Li>
+                <Li>
+                  <GiPlainDagger />
+                  &emsp;
+                  {time}
+                </Li>
+                <Li>
+                  <GiPlainDagger />
+                  &emsp;
+                  {BOSS[boss].region}
+                </Li>
+                <Li>
+                  <GiPlainDagger />
+                  &emsp;
+                  {BOSS[boss].term}
+                </Li>
               </Ul>
             </InfoContainer>
           </BossContainer>
