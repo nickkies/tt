@@ -64,11 +64,11 @@ function App() {
             </P>
             <P>
               <GiCrown />
-              &nbsp; Guild Master: 데켄
+              &nbsp; Guild Master: 데컨
             </P>
             <P>
               <Gi3DHammer />
-              &nbsp; 만든이: 봉딱
+              &nbsp; 만든이: 봉딱(붕딱아님)
             </P>
           </Footer>
         </Container>
