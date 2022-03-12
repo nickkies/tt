@@ -1,7 +1,7 @@
 import styled from '@emotion/styled/macro';
 import { useRecoilValue } from 'recoil';
 
-import { appearTimesState } from '../atoms';
+import { appearTimesState, nextAppearTimeState } from '../atoms';
 import { BOSS } from '../constant';
 import { findBoss } from '../utils';
 
@@ -39,19 +39,26 @@ const Td = styled.td`
   border: 1px solid #a68a7b;
 `;
 
+const Tr = styled.tr`
+  > td {
+    background-color: ${({ now }) => now && '#8c2b45'};
+  }
+`;
+
 export default function TimeTable() {
   const appears = useRecoilValue(appearTimesState);
+  const now = useRecoilValue(nextAppearTimeState);
 
   return (
     <Container>
       <Table>
         <Thead>
-          <tr>
+          <Tr>
             <Th>시간</Th>
             <Th>보스이름</Th>
             <Th>장소</Th>
             <Th>등장 간격</Th>
-          </tr>
+          </Tr>
         </Thead>
         <Tbody>
           {appears &&
@@ -62,16 +69,16 @@ export default function TimeTable() {
                 return <Td colspan='4'>데이터가 없습니다.</Td>;
               } else if (bosses.length === 1) {
                 return (
-                  <tr key={bosses[0] + appear}>
+                  <Tr key={bosses[0] + appear} now={now === appear}>
                     <Td>{appear}</Td>
                     <Td>{BOSS[bosses[0]].name}</Td>
                     <Td>{BOSS[bosses[0]].region}</Td>
                     <Td>{BOSS[bosses[0]].term}</Td>
-                  </tr>
+                  </Tr>
                 );
               } else {
                 return (
-                  <tr key={bosses[0] + bosses[1] + appear}>
+                  <Tr key={bosses[0] + bosses[1] + appear} now={now === appear}>
                     <Td>{appear}</Td>
                     <Td>
                       {BOSS[bosses[0]].name}
@@ -91,7 +98,7 @@ export default function TimeTable() {
                       <br />
                       {BOSS[bosses[1]].term}
                     </Td>
-                  </tr>
+                  </Tr>
                 );
               }
             })}
