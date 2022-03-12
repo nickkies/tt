@@ -1,5 +1,6 @@
 import { atom, selector } from 'recoil';
 import { BOSS } from '../constant';
+import { findBoss } from '../utils';
 
 const arr = [];
 
@@ -7,10 +8,11 @@ Object.entries(BOSS).forEach(([_, { appears }]) => {
   appears.forEach((appear) => arr.push(appear));
 });
 
-// 미래에 쓸 수도 있으니 미리 아톰으로 해놂
+const set = new Set(arr);
+
 export const appearTimesState = atom({
   key: 'appearTimesState',
-  default: arr.sort(),
+  default: [...set].sort(),
 });
 
 export const currentTimeState = atom({
@@ -42,18 +44,6 @@ export const nextBossState = selector({
   key: 'nextBossState',
   get: ({ get }) => {
     const appearTime = get(nextAppearTimeState);
-    const bosses = Object.keys(BOSS);
-
-    if (appearTime === '') return null;
-    let list = [];
-    for (let i in bosses) {
-      const boss = bosses[i];
-
-      const arr = BOSS[boss].appears.filter((appear) => appear === appearTime);
-
-      if (arr.length > 0) list.push(boss);
-    }
-
-    return list;
+    return findBoss(appearTime);
   },
 });
