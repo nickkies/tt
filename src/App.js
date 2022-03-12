@@ -1,5 +1,7 @@
 import { RecoilRoot } from 'recoil';
 import styled from '@emotion/styled/macro';
+import { Gi3DHammer, GiCrown, GiBlackFlag } from 'react-icons/gi';
+
 import CurrentTime from './components/CurrentTime';
 import NextBoss from './components/NextBoss';
 import biPng from './img/bi.png';
@@ -56,8 +58,18 @@ function App() {
           <NextBoss />
           <TimeTable />
           <Footer>
-            <P>하딘혈맹 화이팅</P>
-            <P>만든이: 봉딱</P>
+            <P>
+              <GiBlackFlag />
+              &nbsp;하딘혈맹 화이팅
+            </P>
+            <P>
+              <GiCrown />
+              &nbsp; uild Master: 데켄
+            </P>
+            <P>
+              <Gi3DHammer />
+              &nbsp; 만든이: 봉딱
+            </P>
           </Footer>
         </Container>
       </Background>
