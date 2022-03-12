@@ -7,7 +7,7 @@ export const BOSS = {
   },
   cd: {
     name: '카르디쉬',
-    appears: [],
+    appears: ['00:45', '08:45', '12:45', '16:45', '20:45'],
     region: '우드벡마을 1시(젠 범위 넒음)',
     term: '4시간',
   },
