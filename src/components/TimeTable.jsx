@@ -18,17 +18,13 @@ const Table = styled.table`
 
 const Thead = styled.thead`
   padding-block: 12px;
-  /* > tr {
-    > th {
-      padding-block: 12px;
-      font-weight: normal;
-      width: 14%;
-    }
-  } */
 `;
 
 const Th = styled.th`
   border: 1px solid #a68a7b;
+  background-color: #6b594f;
+  padding-block: 7px;
+  font-weight: bold;
 `;
 
 const Tbody = styled.tbody``;
