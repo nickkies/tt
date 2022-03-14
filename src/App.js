@@ -60,12 +60,14 @@ function App() {
           <Footer>
             <P>
               <GiBlackFlag />
-              &nbsp;하딘혈맹 화이팅
+              {/* &nbsp;하딘혈맹 화이팅 */}
+              &nbsp;캐릭터는 또 다른 나입니다.
             </P>
-            <P>
+            <br />
+            {/* <P>
               <GiCrown />
               &nbsp; Guild Master: 데컨
-            </P>
+            </P> */}
             <P>
               <Gi3DHammer />
               &nbsp; 만든이: 봉딱(붕딱아님)
