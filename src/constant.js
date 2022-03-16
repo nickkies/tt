@@ -8,7 +8,7 @@ export const BOSS = {
   cd: {
     name: '카르디쉬',
     appears: ['00:45', '12:45', '16:45', '20:45'],
-    region: '우드벡마을 1시',
+    region: '우드벡 1시',
     term: '4시간',
   },
   gl: {
@@ -30,7 +30,7 @@ export const BOSS = {
     term: '6시간',
   },
   ap: {
-    name: '아르피어(이벤트)',
+    name: '아르피어',
     appears: ['18:00'],
     region: 'Random',
     term: '24시간',
