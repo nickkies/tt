@@ -1,6 +1,6 @@
 import { RecoilRoot } from 'recoil';
 import styled from '@emotion/styled/macro';
-import { Gi3DHammer, GiCrown, GiBlackFlag } from 'react-icons/gi';
+import { Gi3DHammer, GiCrown, GiBlackFlag, GiDuality } from 'react-icons/gi';
 
 import CurrentTime from './components/CurrentTime';
 import NextBoss from './components/NextBoss';
@@ -59,15 +59,18 @@ function App() {
           <TimeTable />
           <Footer>
             <P>
-              <GiBlackFlag />
-              {/* &nbsp;하딘혈맹 화이팅 */}
+              <GiDuality />
               &nbsp;캐릭터는 또 다른 나입니다.
             </P>
             <br />
-            {/* <P>
+            <P>
+              <GiBlackFlag />
+              &nbsp;하딘11혈맹 화이팅
+            </P>
+            <P>
               <GiCrown />
-              &nbsp; Guild Master: 데컨
-            </P> */}
+              &nbsp; Guild Master: 현검
+            </P>
             <P>
               <Gi3DHammer />
               &nbsp; 만든이: 봉딱(붕딱아님)
