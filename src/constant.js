@@ -29,4 +29,10 @@ export const BOSS = {
     region: '죽음의 폐허',
     term: '6시간',
   },
+  ap: {
+    name: '아르피어(이벤트)',
+    appears: ['18:00'],
+    region: 'Random',
+    term: '24시간',
+  },
 };
