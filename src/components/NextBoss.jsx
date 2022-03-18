@@ -9,6 +9,7 @@ import cdPng from '../img/cd.png';
 import glPng from '../img/gl.png';
 import kyPng from '../img/ky.png';
 import slPng from '../img/sl.png';
+import apPng from '../img/ap.png';
 
 const Container = styled.div`
   display: flex;
@@ -68,6 +69,7 @@ export default function NextBoss() {
               {boss === 'gl' && <Image src={glPng} alt={BOSS[boss].name} />}
               {boss === 'ky' && <Image src={kyPng} alt={BOSS[boss].name} />}
               {boss === 'sl' && <Image src={slPng} alt={BOSS[boss].name} />}
+              {boss === 'ap' && <Image src={apPng} alt={BOSS[boss].name} />}
             </ImageWrapper>
             <InfoContainer>
               <Ul>
