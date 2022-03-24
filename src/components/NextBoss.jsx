@@ -4,12 +4,6 @@ import { nextBossState, nextAppearTimeState } from '../atoms';
 import { GiPlainDagger } from 'react-icons/gi';
 
 import { BOSS } from '../constant';
-import adPng from '../img/ad.png';
-import cdPng from '../img/cd.png';
-import glPng from '../img/gl.png';
-import kyPng from '../img/ky.png';
-import slPng from '../img/sl.png';
-import apPng from '../img/ap.png';
 
 const Container = styled.div`
   display: flex;
@@ -64,12 +58,7 @@ export default function NextBoss() {
         bosses.map((boss) => (
           <BossContainer key={boss}>
             <ImageWrapper>
-              {boss === 'ad' && <Image src={adPng} alt={BOSS[boss].name} />}
-              {boss === 'cd' && <Image src={cdPng} alt={BOSS[boss].name} />}
-              {boss === 'gl' && <Image src={glPng} alt={BOSS[boss].name} />}
-              {boss === 'ky' && <Image src={kyPng} alt={BOSS[boss].name} />}
-              {boss === 'sl' && <Image src={slPng} alt={BOSS[boss].name} />}
-              {boss === 'ap' && <Image src={apPng} alt={BOSS[boss].name} />}
+              <Image src={BOSS[boss].img} alt={BOSS[boss].name} />
             </ImageWrapper>
             <InfoContainer>
               <Ul>
@@ -81,7 +70,12 @@ export default function NextBoss() {
                 <Li>
                   <GiPlainDagger />
                   &emsp;
-                  {time}
+                  {BOSS[boss].name === '라인하르트'
+                    ? `${String(Number(time.substring(0, 2)) + 1).padStart(
+                        2,
+                        0
+                      )}:00`
+                    : time}
                 </Li>
                 <Li>
                   <GiPlainDagger />

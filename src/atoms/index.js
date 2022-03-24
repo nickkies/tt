@@ -47,6 +47,6 @@ export const nextBossState = selector({
   key: 'nextBossState',
   get: ({ get }) => {
     const appearTime = get(nextAppearTimeState);
-    return findBoss(appearTime);
+    return findBoss(appearTime, true);
   },
 });
