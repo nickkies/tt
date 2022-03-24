@@ -4,8 +4,8 @@ import { findBoss } from '../utils';
 
 const arr = [];
 
-Object.entries(BOSS).forEach(([_, { appears }]) => {
-  appears.forEach((appear) => arr.push(appear));
+Object.entries(BOSS).forEach(([_, { name, appears }]) => {
+  if (name !== '라인하르트') appears.forEach((appear) => arr.push(appear));
 });
 
 const set = new Set(arr);
