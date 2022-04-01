@@ -6,6 +6,7 @@ import slPng from './img/sl.png';
 import apPng from './img/ap.png';
 import fbPng from './img/fb.png';
 import lhPng from './img/lh.png';
+import nlPng from './img/nl.png';
 
 export const BOSS = {
   ad: {
@@ -28,6 +29,13 @@ export const BOSS = {
     region: '죽음의숲',
     term: '4시간',
     img: glPng,
+  },
+  nl: {
+    name: '님로드',
+    appears: ['11:30', '15:30', '19:30', '23:30'],
+    region: '포노스 오크 부락',
+    term: '4시간',
+    img: nlPng,
   },
   ky: {
     name: '쿠요',
@@ -52,7 +60,7 @@ export const BOSS = {
   },
   fb: {
     name: '폭죽상자',
-    appears: ['12:10', '15:10', '17:10'],
+    appears: ['12:10', '15:10', '19:10'],
     region: 'Random',
     term: '특정시간',
     img: fbPng,
@@ -63,8 +71,8 @@ export const BOSS = {
       '00:00',
       '02:00',
       '04:00',
-      // '06:00',
-      // '08:00',
+      '06:00',
+      '08:00',
       '10:00',
       '12:00',
       '14:00',
@@ -77,5 +85,3 @@ export const BOSS = {
     img: lhPng,
   },
 };
-
-// 오르쿠스 6시
