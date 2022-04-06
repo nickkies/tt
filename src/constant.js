@@ -4,7 +4,6 @@ import glPng from './img/gl.png';
 import kyPng from './img/ky.png';
 import slPng from './img/sl.png';
 import apPng from './img/ap.png';
-import fbPng from './img/fb.png';
 import lhPng from './img/lh.png';
 import nlPng from './img/nl.png';
 
@@ -57,13 +56,6 @@ export const BOSS = {
     region: 'Random',
     term: '24시간',
     img: apPng,
-  },
-  fb: {
-    name: '폭죽상자',
-    appears: ['12:10', '15:10', '19:10'],
-    region: 'Random',
-    term: '특정시간',
-    img: fbPng,
   },
   lh: {
     name: '라인하르트',
