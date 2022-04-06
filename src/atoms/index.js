@@ -20,6 +20,18 @@ export const currentTimeState = atom({
   default: '',
 });
 
+// 라인은 두 시간 마다 젠
+export const lhAppearTime = selector({
+  key: 'lhAppearTimeState',
+  get: ({ get }) => {
+    let now = Number(get(currentTimeState).substring(0, 2));
+
+    now = now % 2 === 0 ? now + 2 : now + 1;
+
+    return `${String(now).padStart(2, 0)}:00`;
+  },
+});
+
 export const nextAppearTimeState = selector({
   key: 'nextAppearTimeState',
   get: ({ get }) => {

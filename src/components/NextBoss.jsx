@@ -1,6 +1,6 @@
 import styled from '@emotion/styled/macro';
 import { useRecoilValue } from 'recoil';
-import { nextBossState, nextAppearTimeState, currentTimeState } from '../atoms';
+import { nextBossState, nextAppearTimeState, lhAppearTime } from '../atoms';
 import { GiPlainDagger } from 'react-icons/gi';
 
 import { BOSS } from '../constant';
@@ -51,7 +51,7 @@ const Li = styled.li``;
 export default function NextBoss() {
   const bosses = useRecoilValue(nextBossState);
   const time = useRecoilValue(nextAppearTimeState);
-  const now = useRecoilValue(currentTimeState);
+  const hltime = useRecoilValue(lhAppearTime);
 
   return (
     <Container>
@@ -71,12 +71,7 @@ export default function NextBoss() {
                 <Li>
                   <GiPlainDagger />
                   &emsp;
-                  {BOSS[boss].name === '라인하르트'
-                    ? `${String(Number(now.substring(0, 2)) + 1).padStart(
-                        2,
-                        0
-                      )}:00`
-                    : time}
+                  {BOSS[boss].name === '라인하르트' ? hltime : time}
                 </Li>
                 <Li>
                   <GiPlainDagger />
