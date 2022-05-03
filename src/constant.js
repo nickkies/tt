@@ -6,6 +6,9 @@ import slPng from './img/sl.png';
 import apPng from './img/ap.png';
 import lhPng from './img/lh.png';
 import nlPng from './img/nl.png';
+import ldPng from './img/ld.png';
+import spPng from './img/sp.png';
+import drPng from './img/dr.png';
 
 export const BOSS = {
   ad: {
@@ -51,11 +54,32 @@ export const BOSS = {
     img: slPng,
   },
   ap: {
-    name: '아르피어',
+    name: '아르피어(애기)',
     appears: ['18:00'],
     region: 'Random',
     term: '24시간',
     img: apPng,
+  },
+  ld: {
+    name: '라돈(월드보스)',
+    appears: ['11:55'],
+    region: '아덴 어딘가...',
+    term: '24시간',
+    img: ldPng,
+  },
+  sp: {
+    name: '스피리드(월드보스)',
+    appears: ['14:56'],
+    region: '아덴 어딘가...',
+    term: '24시간',
+    img: spPng,
+  },
+  dr: {
+    name: '드레이크',
+    appears: ['00:30', '04:30', '08:30', '12:30', '16:30', '20:30'],
+    region: '용의 계곡(1,2,4,3)',
+    term: '4시간',
+    img: drPng,
   },
   lh: {
     name: '라인하르트',
