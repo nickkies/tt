@@ -35,7 +35,7 @@ export const BOSS = {
   nl: {
     name: '님로드',
     appears: ['11:30', '15:30', '19:30', '23:30'],
-    region: '포노스 오크 부락',
+    region: '포노스오크부락',
     term: '4시간',
     img: nlPng,
   },
@@ -54,21 +54,21 @@ export const BOSS = {
     img: slPng,
   },
   ap: {
-    name: '아르피어(애기)',
+    name: '아르피어',
     appears: ['18:00'],
     region: 'Random',
     term: '24시간',
     img: apPng,
   },
   ld: {
-    name: '라돈(월드보스)',
+    name: '라돈(월보)',
     appears: ['11:55'],
     region: '아덴 어딘가...',
     term: '24시간',
     img: ldPng,
   },
   sp: {
-    name: '스피리드(월드보스)',
+    name: '스피리드(월보)',
     appears: ['14:56'],
     region: '아덴 어딘가...',
     term: '24시간',
@@ -77,7 +77,7 @@ export const BOSS = {
   dr: {
     name: '드레이크',
     appears: ['00:30', '04:30', '08:30', '12:30', '16:30', '20:30'],
-    region: '용의 계곡(1,2,4,3)',
+    region: '용의 계곡',
     term: '4시간',
     img: drPng,
   },
@@ -97,7 +97,7 @@ export const BOSS = {
       '20:00',
     ],
     region: '말던 2층',
-    term: '1시간',
+    term: '2시간',
     img: lhPng,
   },
 };
