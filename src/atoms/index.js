@@ -4,8 +4,10 @@ import { findBoss } from '../utils';
 
 const arr = [];
 
-Object.entries(BOSS).forEach(([_, { name, appears }]) => {
-  if (name !== '라인하르트') appears.forEach((appear) => arr.push(appear));
+Object.entries(BOSS).forEach(([_, { appears }]) => {
+  //if (name !== '라인하르트') {
+  appears.forEach((appear) => arr.push(appear));
+  // }
 });
 
 const set = new Set(arr);
@@ -21,16 +23,16 @@ export const currentTimeState = atom({
 });
 
 // 라인은 두 시간 마다 젠
-export const lhAppearTime = selector({
-  key: 'lhAppearTimeState',
-  get: ({ get }) => {
-    let now = Number(get(currentTimeState).substring(0, 2));
+// export const lhAppearTime = selector({
+//   key: 'lhAppearTimeState',
+//   get: ({ get }) => {
+//     let now = Number(get(currentTimeState).substring(0, 2));
 
-    now = now % 2 === 0 ? now + 2 : now + 1;
+//     now = now % 2 === 0 ? now + 2 : now + 1;
 
-    return `${String(now).padStart(2, 0)}:00`;
-  },
-});
+//     return `${String(now).padStart(2, 0)}:00`;
+//   },
+// });
 
 export const nextAppearTimeState = selector({
   key: 'nextAppearTimeState',
